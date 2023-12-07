@@ -22,6 +22,9 @@ module.exports = {
       }
     },
     fontSize: {
+      '14': ['14px', {
+        lineHeight: '18px'
+      }],
       '16': ['16px', {
         lineHeight: '22px'
       }],

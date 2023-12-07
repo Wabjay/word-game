@@ -1,30 +1,22 @@
 // import { options } from "../api/auth/[...nextauth]/options"
 // import { getServerSession } from "next-auth/next"
-// import UserCard from "../components/UserCard"
+import UserCard from "../components/UserCard"
 // import { redirect } from "next/navigation"
 
-// export default async function ServerPage() {
-//     const session = await getServerSession(options)
+export default async function ServerPage() {
+    // const session = await getServerSession(options)
 
-//     if (!session) {
-//         redirect('/api/auth/signin?callbackUrl=/server')
-//     }
+    // if (!session) {
+    //     redirect('/api/auth/signin?callbackUrl=/server')
+    // }
 
-//     return (
-//         <section className="flex flex-col gap-6">
-//             <UserCard user={session?.user} pagetype={"Server"} />
-//         </section>
-//     )
+    return (
+        <section className="flex flex-col gap-6">
+            {/* <UserCard user={session?.user} pagetype={"Server"} /> */}
+            <UserCard user={{}} pagetype={"Server"} />
+        </section>
+    )
 
-// }
-
-
-import React from 'react'
-
-const ServerPage = () => {
-  return (
-    <div>ServerPage</div>
-  )
 }
 
-export default ServerPage
+

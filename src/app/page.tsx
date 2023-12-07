@@ -4,6 +4,8 @@
 import LandingPage from "./landing/page"
 
 export default async function Home() {
+
+  // Uncomment after the authentication has been done
   // const session = await getServerSession(options)
 
   return (
