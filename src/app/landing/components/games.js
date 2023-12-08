@@ -7,7 +7,7 @@ const Games = () => {
   return (
     <div className='w-full'>
        <div id='presentation' className='w-full laptop:max-w-[1152px] mx-auto px-4 tablet:px-6 laptop:px-8 desktop:px-0 text-center  py-[40px] tablet:py-[80px] laptop:py-[100px]'>
-<p className='text-[24px] leading-[32px] tracking-[-0.96px] mb-6 tablet:text-[32px] tablet:leading-[39px] tablet:tracking-[-1px] tablet:mb-[40px] laptop:text-[48px] laptop:leading-[40px] laptop:mb-[70px] font-bold w-[288px] tablet:w-[441px] laptop:w-[690px] mx-auto'>How our game works</p>
+<p className='text-24 mb-6 tablet:text-32 tablet:mb-[40px] laptop:mb-[70px] font-bold w-[288px] tablet:w-[441px] laptop:w-[690px] mx-auto'>How our game works</p>
 
       <div className='flex flex-col gap-5 tablet:gap-[40px] items-center laptop:flex-row laptop:items-start laptop:gap-8 text-center'>
       <Game image={Random} title='Generate random numbers' description='Click on the learn new word  button to get started on generating numbers' />

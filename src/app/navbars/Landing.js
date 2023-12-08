@@ -4,7 +4,9 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Logo from '/public/Logo.svg'
-import Hambugger from '/public/hambugger.svg'
+import Hambugger from '@/assets/hambugger.png'
+import Close from '@/assets/cancel.svg'
+
 const LandingNavbar = () => {
     const [visibility, setVisibility] = useState(false)
     const isSmallScreen = useMediaQuery({ query: '(max-width: 1023px)' })
@@ -26,18 +28,22 @@ const LandingNavbar = () => {
                     <div className="flex items-center laptop:order-1">
                         {
                             isSmallScreen ? <>
-                                <Image src={Hambugger} width="24" height="24" className="w-6" alt="Hambugger Icon" onClick={toggleNavbar} />
+                                {!visibility && <Image src={Hambugger} width="24" height="24" className="w-6" alt="Hambugger Icon" onClick={toggleNavbar} />}
+
                                 {visibility &&
-                                    <div className='fixed top-[60px] left-0 h-full max-h-[550px] bg-[#F8F7F1] w-[256px] p-4'>
+                                    <div className='fixed top-[60px] left-0 h-full max-h-[550px] bg-[#F8F7F1] w-[256px] p-4 border-t border-t-[#8B8B8B]'>
+                                        <Image src={Close} width="24" height="24" className="w-6 mr-0 ml-auto fixed left-[208px] top-4" alt="Hambugger Icon" onClick={toggleNavbar} />
+
+
                                         <ul className="flex flex-col font-medium gap-2">
-                                        <Link smooth href="/#pricing" onClick={toggleNavbar}
+                                            <Link smooth href="/#pricing" onClick={toggleNavbar}
                                                 className="hover:bg-white hover:border-[#1C1C1C] hover:border hover:shadow-darkbox py-2 px-2 text-sm font-medium focus:outline-none ">
                                                 Sign In</Link>
                                             <Link smooth href="/#pricing" onClick={toggleNavbar}
                                                 className="hover:bg-white hover:border-[#1C1C1C] hover:border hover:shadow-darkbox py-2 px-2 text-sm font-medium focus:outline-none ">
                                                 Create Account</Link>
                                         </ul>
-                                        
+
                                     </div>}
                             </>
                                 :
